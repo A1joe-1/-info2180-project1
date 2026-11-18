@@ -1,11 +1,305 @@
-/* Add your CSS to this file */
 body {
     margin: 0;
-    font-size: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333; 
 }
 
 .container {
     margin: 0 auto;
     max-width: 960px;
     width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: white;
+    font-size: 18px;
+    padding: 20px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px; 
+}
+
+header nav ul {
+    list-style-type: none; 
+    margin: 0;
+    padding: 0;
+    display: flex; 
+    gap: 20px; 
+}
+
+header nav ul li a {
+    text-decoration: none; 
+    color: #6b7280; 
+    transition: color 0.2s;
+}
+
+header nav ul li a:hover {
+    color: #5A67D8; 
+} 
+
+/* =========================================
+   HERO SECTION
+   ========================================= */
+.overview-hero {
+    background-color: #E2E8F0;
+    padding: 60px 0;
+}
+
+.overview-hero .container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.overview-hero-image {
+    flex: 1;
+}
+
+.overview-hero-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.overview-hero-text {
+    flex: 1;
+} 
+
+/* =========================================
+   LEARN ABOUT SECTION (CSS GRID)
+   ========================================= */
+.learn-about {
+    padding: 60px 0;
+}
+
+.learn-about h2 {
+    font-size: 24px;
+    color: #48BB78;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.card {
+    border: 1px solid #E2E8F0;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    background-color: white;
+    overflow: hidden; 
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-body h3 {
+    color: #48BB78;
+    font-size: 21px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.card-body p {
+    margin: 0;
+    color: #4A5568;
+} 
+/* =========================================
+   COVID-19 TESTING SECTION
+   ========================================= */
+.testing {
+    background-color: #4A5568;
+    color: white;
+    padding: 50px 0;
+}
+
+.testing .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.testing-desciption {
+    flex: 2; 
+}
+
+.testing-desciption h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.testing-desciption p {
+    margin: 0;
+    color: #E2E8F0; 
+}
+
+.testing .cta {
+    flex: 1;
+    text-align: right;
+}
+
+.testing .btn {
+    display: inline-block;
+    background-color: #48BB78;
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.testing .btn:hover {
+    background-color: #38A169; 
+} 
+/* =========================================
+   RECENT STORIES SECTION
+   ========================================= */
+.stories {
+    padding: 60px 0;
+}
+
+.stories h2 {
+    color: #5A67D8;
+    font-size: 28px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.stories article {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.stories article img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.article-body h3 {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #1A202C;
+}
+
+.article-body p {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #4A5568;
+}
+
+.article-body a {
+    color: #5A67D8;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.article-body a:hover {
+    text-decoration: underline;
+} 
+
+/* =========================================
+   NEWSLETTER SECTION
+   ========================================= */
+.newsletter {
+    background-color: #48BB78;
+    color: white;
+    padding: 60px 0;
+}
+
+.newsletter .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.newsletter h3 {
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.newsletter p {
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+
+.newsletter form {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    max-width: 500px;
+    justify-content: center;
+}
+
+.newsletter .form-group {
+    flex: 1;
+}
+
+.newsletter input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.newsletter .btn {
+    background-color: #5A67D8;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.newsletter .btn:hover {
+    background-color: #4C51BF;
+}
+
+/* =========================================
+   FOOTER SECTION
+   ========================================= */
+footer {
+    background-color: #4A5568;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    font-size: 16px;
 }
